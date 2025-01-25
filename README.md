@@ -16,59 +16,38 @@ PulseForge is an innovative Java-based framework for creating interactive and dy
 
 # Getting Started
 
-Prerequisites
+## Prerequisites
 
-Java Development Kit (JDK) 11 or later
+- Java Development Kit (JDK) 11 or later
 
-Apache Maven
+- Apache Maven
 
-(Optional) Docker for containerization
+- (Optional) Docker for containerization
 
-Installation
+# Installation
 
-Clone the repository:
+1. Clone the repository:
 
-git clone https://github.com/yourusername/PulseForge.git
+```git clone https://github.com/yourusername/PulseForge.git```
 
-Navigate to the project directory:
+2. Navigate to the project directory:
 
-cd PulseForge
+```cd PulseForge``` 
 
-Build the project using Maven:
+3. Build the project using Maven:
 
-mvn clean install
+```mvn clean install```
 
-Running the Application
+# Running the Application
 
-Start the application:
+1. Start the application:
 
-java -jar target/PulseForge-1.0.jar
+```java -jar target/PulseForge-1.0.jar```
 
-Access the dashboard or API endpoints as described in the documentation.
+2. Access the dashboard or API endpoints as described in the documentation.
 
-Example Usage
-
-Below is a simple example of using PulseForge to create a chatbot:
-
-import com.pulseforge.ai.Chatbot;
-import com.pulseforge.ai.events.UserInputEvent;
-
-public class ExampleChatbot {
-    public static void main(String[] args) {
-        Chatbot chatbot = new Chatbot("Hello! How can I help you today?");
-
-        chatbot.onEvent(UserInputEvent.class, event -> {
-            String userInput = event.getInput();
-            String response = chatbot.processInput(userInput);
-            System.out.println("Bot: " + response);
-        });
-
-        chatbot.start();
-    }
-}
-
-Directory Structure
-
+# Directory Structure
+```
 PulseForge/
 ├── src/
 │   ├── main/
@@ -84,26 +63,26 @@ PulseForge/
 │               └── pulseforge/
 ├── pom.xml
 └── README.md
-
-Contributing
+```
+# Contributing
 
 We welcome contributions to PulseForge! To contribute:
 
-Fork the repository.
+1. Fork the repository.
 
-Create a feature branch:
-
+2. Create a feature branch:
+```
 git checkout -b feature-name
-
-Commit your changes:
-
+```
+3. Commit your changes:
+```
 git commit -m "Description of changes"
-
-Push the branch:
-
+```
+4. Push the branch:
+```
 git push origin feature-name
-
-Submit a pull request.
+```
+5. Submit a pull request.
 
 License
 
@@ -111,6 +90,6 @@ This project is licensed under the MIT License. See the LICENSE file for details
 
 Contact
 
-For questions or support, please contact yourname@example.com.
+For questions or support, please contact PulseForge@outlook.com.
 
 Happy coding with PulseForge! 🚀
