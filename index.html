@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive AI Chat</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <h1>Interactive AI Chat</h1>
+    <div>
+        <textarea id="userMessage" rows="4" cols="50" placeholder="Type your message here..."></textarea>
+        <button onclick="sendMessage()">Send</button>
+    </div>
+    <div id="response"></div>
+
+    <script>
+        function sendMessage() {
+            const userMessage = $("#userMessage").val();
+            $.ajax({
+                url: "/api/chat",
+                method: "POST",
+                contentType: "application/json",
+                data: JSON.stringify({ message: userMessage }),
+                success: function(response) {
+                    $("#response").text("AI Response: " + response.response);
+                },
+                error: function() {
+                    $("#response").text("Error communicating with the AI.");
+                }
+            });
+        }
+    </script>
+</body>
+</html>
